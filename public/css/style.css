@@ -1,0 +1,85 @@
+:root {
+  --primary-color: #231010;
+  --accent-color: #d9ead3;
+  --accent-drop-color: #a7a7a7;
+  --my-post-color: #a8a8a8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--accent-color);
+}
+
+.header {
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 1rem 2rem;
+}
+
+nav {
+  display: flex;
+  gap: 3rem;
+}
+
+nav > * {
+  color: inherit;
+  text-decoration: none;
+  background-color: var(--primary-color);
+  border: none;
+  font-size: 1rem;
+}
+
+.route-header {
+  background-color: var(--primary-color);
+  padding: 0.75rem 2rem 2rem 2rem;
+}
+
+h1 {
+  display: inline;
+  margin: 0;
+}
+
+h1 > span {
+  background-color: var(--accent-color);
+  color: var(--primary-color);
+  margin: 0.5rem 0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 5px;
+  box-shadow: 5px 5px var(--accent-drop-color);
+}
+
+.post {
+  margin: 2rem;
+  border: 0.2rem solid black;
+}
+
+.post header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: var(--accent-color);
+  padding: 0.5rem 0.75rem;
+}
+
+.post header h2 {
+  font-size: 1.25rem;
+}
+
+.post header div {
+  font-size: 0.75rem;
+}
+
+.post header > * {
+  padding: 0;
+  margin: 0;
+}
+
+.post.my-post header > * {
+  color: var(--my-post-color);
+}
+
+.post p {
+  padding: 0.5rem 0.75rem;
+}

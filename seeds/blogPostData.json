@@ -1,0 +1,47 @@
+[
+  {
+    "userId": "1",
+    "title": "Sup",
+    "post": "Post 1"
+  },
+  {
+    "userId": "1",
+    "title": "Dude",
+    "post": "Post 2"
+  },
+  {
+    "userId": "2",
+    "title": "Gnarly",
+    "post": "Post 3"
+  },
+  {
+    "userId": "2",
+    "title": "Person",
+    "post": "Post 4"
+  },
+  {
+    "userId": "2",
+    "title": "Place",
+    "post": "Post 5"
+  },
+  {
+    "userId": "2",
+    "title": "Thing",
+    "post": "Post 6"
+  },
+  {
+    "userId": "2",
+    "title": "Animals",
+    "post": "Post 7"
+  },
+  {
+    "userId": "2",
+    "title": "People",
+    "post": "Post 8"
+  },
+  {
+    "userId": "2",
+    "title": "Presents",
+    "post": "Post 9"
+  }
+]
