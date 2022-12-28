@@ -23,8 +23,13 @@ router.get('/', async (req, res) => {
 
 router.post('/', async (req, res) => {
   try {
+    const { userId, title, post } = req.body;
+    const data = await BlogPost.create({ userId, title, post });
+
+    res.status(200).json(data);
   } catch (err) {
-    res.status(400).json(err);
+    console.log('error', err);
+    res.status(500).json(err);
   }
 });
 

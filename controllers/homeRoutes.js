@@ -34,17 +34,40 @@ router.get('/', async (req, res) => {
 router.get('/dashboard', withAuth, async (req, res) => {
   try {
     // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
+    const user = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
+      raw: true,
     });
 
-    const user = userData.get({ plain: true });
+    const postData = await BlogPost.findAll({
+      where: { userId: user.id },
+      raw: true,
+    });
 
     res.render('dashboard', {
+      ...user,
+      postData,
+      logged_in: true,
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/newPost', withAuth, async (req, res) => {
+  try {
+    // Find the logged in user based on the session ID
+    const user = await User.findByPk(req.session.user_id, {
+      attributes: { exclude: ['password'] },
+      raw: true,
+    });
+
+    res.render('newPost', {
       ...user,
       logged_in: true,
     });
   } catch (err) {
+    console.log(err);
     res.status(500).json(err);
   }
 });
