@@ -1,0 +1,30 @@
+.comment-block {
+  border: 0.2rem solid var(--primary-color);
+  margin: 2rem;
+}
+
+.comment-block > header {
+  height: 2rem;
+  background-color: var(--primary-color);
+}
+
+.comment-block > form {
+  margin: 0.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.comment-block > form > textarea {
+  border: 2px solid #4a87e9;
+}
+
+.comment-block > form > button {
+  background-color: #666;
+  color: #e2e2f2;
+  border: none;
+  padding: 0.5rem 0;
+  font-size: 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}

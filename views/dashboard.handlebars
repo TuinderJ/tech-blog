@@ -1,14 +1,12 @@
 <header class='route-header'><h1><span>Your Dashboard</span></h1></header>
 <section>
   {{#each postData}}
-    <div class='post my-post'>
-      <header>
-        <h2>{{title}}</h2>
-        <div>Posted by {{user.name}} on {{createdAt}}</div>
-      </header>
-      <p>{{post}}</p>
+    <div class='dashboardPost' data-id={{id}}>
+      <h2>{{title}}</h2>
+      <div>{{createdAt}}</div>
     </div>
   {{/each}}
 </section>
 <button id='newPostButton'>+ New Post</button>
+<link rel='stylesheet' href='./css/dashboard.css' />
 <script defer src='./js/dashboard.js'></script>

@@ -1,0 +1,16 @@
+<header class='route-header'><h1><span>Your Dashboard</span></h1></header>
+<form id='editPostForm' data-id={{post.id}}>
+  <header data-userId={{user.id}}><h2>Edit A Post</h2></header>
+  <div>
+    <label for='title'>Title</label>
+    <input id='title' type='text' value='{{post.title}}' />
+  </div>
+  <div>
+    <label for='content'>Content</label>
+    <input id='content' type='text' value='{{post.post}}' />
+  </div>
+  <button type='submit'>Update Post</button>
+  <button id='deletePostButton'>Delete</button>
+</form>
+<link href='/css/editPost.css' rel='stylesheet' />
+<script defer src='/js/editPost.js'></script>

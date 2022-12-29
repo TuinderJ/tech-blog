@@ -1,15 +1,28 @@
 <header class='route-header'><h1><span>The Tech Blog</span></h1></header>
 {{! insert dynamic posts here }}
 {{#each postData}}
-  {{#if myPost}}
-    <div class='post my-post'>
-  {{else}}
-    <div class='post'>
-  {{/if}}
-    <header>
-      <h2>{{title}}</h2>
-      <div>Posted by {{[user.name]}} on {{createdAt}}</div>
-    </header>
-    <p>{{post}}</p>
-  </div>
+{{#if myPost}}
+<div class='post my-post' data-id="{{id}}">
+{{else}}
+<div class='post' data-id="{{id}}">
+{{/if}}
+  <header>
+    <h2>{{title}}</h2>
+    <div>Posted by {{user.name}} on {{createdAt}}</div>
+  </header>
+  <p>{{post}}</p>
+</div>
+{{#each comments}}
+{{#if myComment}}
+<div class="comment my-comment" data-id="{{id}}">
+{{else}}
+<div class="comment" data-id="{{id}}">
+{{/if}}
+  <header></header>
+  <p>{{comment}}</p>
+  <p>-{{user.name}}, {{createdAt}}</p>
+</div>
 {{/each}}
+{{/each}}
+<link rel="stylesheet" href="/css/homepage.css" />
+<script src="/js/homepage.js"></script>

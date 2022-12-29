@@ -1,0 +1,17 @@
+.dashboardPost {
+  background-color: #666;
+  color: #d5d2e0;
+  margin: 2rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 0.25rem;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.dashboardPost > * {
+  padding: 0;
+  margin: 0;
+  font-size: 1.25rem;
+}

@@ -33,4 +33,30 @@ router.post('/', async (req, res) => {
   }
 });
 
+router.put('/:postId', async (req, res) => {
+  try {
+    const { userId, title, post } = req.body;
+    const { postId } = req.params;
+    const data = await BlogPost.update(
+      { userId, title, post },
+      { where: { id: postId } }
+    );
+    data[0] ? res.status(200).json(data) : res.status(400).json('bad request');
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.delete('/:postId', async (req, res) => {
+  try {
+    const { postId } = req.params;
+    const data = await BlogPost.destroy({ where: { id: postId } });
+    console.log(data);
+    data ? res.status(200).json(data) : res.status(400).json('bad request');
+  } catch (err) {
+    console.log(err);
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

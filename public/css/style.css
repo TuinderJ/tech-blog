@@ -94,3 +94,21 @@ h1 > span {
   margin: 0 auto;
   cursor: pointer;
 }
+
+.comment {
+  border: 0.2rem solid var(--primary-color);
+  margin: 2rem 3rem;
+}
+
+.comment > p {
+  margin: 1rem;
+}
+
+.comment > header {
+  height: 2rem;
+  background-color: var(--primary-color);
+}
+
+.my-comment {
+  cursor: pointer;
+}

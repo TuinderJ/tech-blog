@@ -1,0 +1,24 @@
+<header class='route-header'><h1><span>The Tech Blog</span></h1></header>
+{{! insert dynamic posts here }}
+{{#if myPost}}
+<div class='post my-post' data-id="{{id}}">
+{{else}}
+<div class='post' data-id="{{id}}">
+{{/if}}
+  <header>
+    <h2>{{title}}</h2>
+    <div>Posted by {{[user.name]}} on {{createdAt}}</div>
+  </header>
+  <p>{{post}}</p>
+</div>
+<div class="comment-block" data-id="{{comment.id}}">
+  <header></header>
+  <form id="comment-form">
+    <label for="comment">Comment</label>
+    <textarea id="comment">{{comment.comment}}</textarea>
+    <button type="submit">Update</button>
+    <button id="deleteCommentButton">Delete</button>
+  </form>
+</div>
+<link rel="stylesheet" href="/css/comment.css" />
+<script src="/js/editComment.js"></script>
