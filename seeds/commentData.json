@@ -2,11 +2,11 @@
   {
     "userId": 1,
     "blogPostId": 1,
-    "comment": "Testing 123"
+    "comment": "Dogs are pretty cool. Wait until you see mine!"
   },
   {
     "userId": 2,
-    "blogPostId": 1,
-    "comment": "Testing 456"
+    "blogPostId": 2,
+    "comment": "I'm not a fan of handlebars. It's so... goofy."
   }
 ]

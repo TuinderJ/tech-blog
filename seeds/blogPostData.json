@@ -1,47 +1,20 @@
 [
   {
-    "userId": "1",
-    "title": "Sup",
-    "post": "Post 1"
-  },
-  {
-    "userId": "1",
-    "title": "Dude",
-    "post": "Post 2"
-  },
-  {
-    "userId": "2",
-    "title": "Gnarly",
-    "post": "Post 3"
-  },
-  {
-    "userId": "2",
-    "title": "Person",
-    "post": "Post 4"
-  },
-  {
-    "userId": "2",
-    "title": "Place",
-    "post": "Post 5"
-  },
-  {
-    "userId": "2",
-    "title": "Thing",
-    "post": "Post 6"
-  },
-  {
-    "userId": "2",
+    "id": 1,
+    "userId": 2,
     "title": "Animals",
-    "post": "Post 7"
+    "post": "I like dogs. Am I supposed to say more?"
   },
   {
-    "userId": "2",
-    "title": "People",
-    "post": "Post 8"
+    "id": 2,
+    "userId": 1,
+    "title": "MVC",
+    "post": "I'm learning this new tech stack where we use handlebars.js. It's different to get used to but it's got some cool functionality to it."
   },
   {
-    "userId": "2",
+    "id": 3,
+    "userId": 3,
     "title": "Presents",
-    "post": "Post 9"
+    "post": "I got a lot of cool tech stuff for Christmas. I can't wait to show all of my... oh..."
   }
 ]

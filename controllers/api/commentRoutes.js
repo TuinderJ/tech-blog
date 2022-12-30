@@ -31,9 +31,10 @@ router.put('/:commentId', withAuth, async (req, res) => {
   }
 });
 
-// TODO: finish
 router.delete('/:commentId', async (req, res) => {
   try {
+    const { commentId } = req.params;
+    const data = await Comment.destroy({ where: { id: commentId } });
     data ? res.status(200).json(data) : res.status(400).json('bad request');
   } catch (err) {
     console.log(err);

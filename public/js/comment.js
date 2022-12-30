@@ -5,6 +5,7 @@ document
     const postId = document.querySelector('.post').dataset.id;
     const form = document.querySelector('#comment-form');
     const comment = form.comment.value;
+    if (comment === '') return alert('Please fill something out.');
     const body = JSON.stringify({
       postId,
       comment,

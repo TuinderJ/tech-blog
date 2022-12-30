@@ -91,7 +91,7 @@ h1 > span {
   padding: 0.5rem 1rem;
   border-radius: 0.375rem;
   display: block;
-  margin: 0 auto;
+  margin: 1rem auto;
   cursor: pointer;
 }
 

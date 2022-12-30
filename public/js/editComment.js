@@ -4,6 +4,7 @@ document
     e.preventDefault();
     const id = document.querySelector('.comment-block').dataset.id;
     const comment = document.querySelector('#comment-form').comment.value;
+    if (comment === '') return alert('Please fill something out.');
     const body = JSON.stringify({ comment });
 
     const response = await fetch(`/api/comments/${id}`, {
@@ -13,8 +14,6 @@ document
     });
 
     response.ok ? (location.href = '/') : alert('Something went wrong...');
-
-    console.log(response);
   });
 
 document
@@ -25,5 +24,6 @@ document
     const id = document.querySelector('.comment-block').dataset.id;
 
     const response = await fetch(`/api/comments/${id}`, { method: 'DELETE' });
-    console.log(response);
+
+    response.ok ? (location.href = '/') : alert('Something went wrong...');
   });
